@@ -1,16 +1,41 @@
-# scube_monitoring
+# Scube Monitoring Flutter App
 
-A new Flutter project.
+A Flutter-based mobile application for monitoring PV (Photovoltaic) systems in real-time. The app provides live data of energy generation, AC/DC capacity, module temperatures, wind speed, and other essential metrics for PV systems.  
 
-## Getting Started
+The app is designed with a modern, responsive UI for both Android and iOS devices.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Dashboard View**: Displays key system metrics like live AC power, plant generation, PR (Performance Ratio), cumulative PR, total energy, and returns.
+- **Temperature & Sun/Moon Tiles**: Dynamic weather and PV module temperature information depending on the current time slot.
+- **Data Table**: Shows yesterday's and today's PV system performance metrics in a tabular format.
+- **PV System Information**: Lists complete system information including AC/DC capacity, number of inverters, total PV modules, and commissioning date.
+- **Detailed PV System Data**: Energy statistics including lifetime energy, today's energy, live power, and previous meter energy.
+- **Multiple Screens**: Easy navigation between different pages for more detailed insights.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## Screenshots
+
+| Splash Screen | Login Screen |
+|---------------|-------------|
+| ![Splash](screenshot/splash.png) | ![Login](screenshot/login.png) |
+
+| First Page - Overview | First Page - Tiles |
+|----------------------|------------------|
+| ![First Page](screenshot/firstpage.png) | ![First Page](screenshot/firstpage1.png) |
+
+| Second Page |
+|-------------|
+| ![Second Page](screenshot/secondpage.png) |
+
+---
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/abdulazizpatwary/scubeproject
