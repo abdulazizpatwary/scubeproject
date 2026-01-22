@@ -69,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              // Logo
+
                               Container(
                                 width: 80,
                                 height: 80,
@@ -83,7 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                               const SizedBox(height: 16),
 
-                              // App Name
+
                               Text(
                                 AppConstants.appName,
                                 style: GoogleFonts.inter(
@@ -94,7 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                               const SizedBox(height: 4),
 
-                              // App Subtitle
+
                               Text(
                                 AppConstants.appSubtitle,
                                 style: GoogleFonts.inter(
@@ -150,7 +150,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             const SizedBox(height: 24),
 
-                            // Username Field
+
 
                             const SizedBox(height: 8),
                             TextFormField(
@@ -253,7 +253,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               alignment: Alignment.centerRight,
                               child: TextButton(
                                 onPressed: () {
-                                  // Handle forgot password
+
                                 },
                                 child: Text(
                                   'Forgot password?',
@@ -304,7 +304,6 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             const SizedBox(height: 20),
 
-                            // Register Link
                             Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [

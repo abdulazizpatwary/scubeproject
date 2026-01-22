@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scube_monitoring/ui/second_screen.dart';
 
-// 🟢 TimeSlot Model + Example Slots
+
 class TimeSlot {
   final String tempIcon;
   final String sunIcon;
@@ -34,7 +34,7 @@ class TimeSlot {
   });
 }
 
-// 🟢 Helper function to get current time slot
+//function to get current time slot
 TimeSlot getCurrentTimeSlot() {
   final now = DateTime.now();
   final hour = now.hour;
@@ -115,7 +115,7 @@ TimeSlot getCurrentTimeSlot() {
   }
 }
 
-// 🟢 Dashboard Item Model
+
 class DashboardItem {
   final String icon;
   final String title;
@@ -128,7 +128,7 @@ class DashboardItem {
   });
 }
 
-// 🟢 Dashboard Card Widget
+
 class DashboardCard extends StatelessWidget {
   final DashboardItem item;
 
@@ -283,7 +283,7 @@ class TemperatureTile extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w700,
-                    color: Colors.black,
+                    color: Colors.blue,
                   ),
                 ),
                 const SizedBox(height: 2),
@@ -325,7 +325,6 @@ class TemperatureTile extends StatelessWidget {
   }
 }
 
-// 🟢 Sun/Moon Tile Widget
 class SunMoonTile extends StatelessWidget {
   final TimeSlot slot;
 
@@ -335,7 +334,7 @@ class SunMoonTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 80,
-      padding: const EdgeInsets.only(left: 55, right: 12, top: 6, bottom: 6),
+      padding: const EdgeInsets.only(left: 50, right: 12, top: 6, bottom: 6),
       decoration: BoxDecoration(
         gradient: const LinearGradient(
           begin: Alignment.topLeft,
@@ -399,7 +398,7 @@ class SunMoonTile extends StatelessWidget {
             ),
           ),
 
-          // Right: Sun/Moon Icon
+
           Container(
             height: slot.sunIconHeight,
             width: slot.sunIconWidth,
@@ -422,7 +421,6 @@ class SunMoonTile extends StatelessWidget {
   }
 }
 
-// 🟢 Data Table Widget
 class DataTableWidget extends StatelessWidget {
   DataTableWidget({super.key});
 
@@ -486,11 +484,11 @@ class DataTableWidget extends StatelessWidget {
                 Expanded(
                   flex: 2,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
+                    padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
                     child: Text(
                       '',
                       style: TextStyle(
-                        fontSize: 8,
+                        fontSize: 10,
                         fontWeight: FontWeight.w600,
                         color: Colors.grey[700],
                       ),
@@ -504,7 +502,7 @@ class DataTableWidget extends StatelessWidget {
                     child: Text(
                       "Yesterday's Data",
                       style: TextStyle(
-                        fontSize: 8,
+                        fontSize: 10,
                         fontWeight: FontWeight.w600,
                         color: Colors.grey[700],
                       ),
@@ -519,7 +517,7 @@ class DataTableWidget extends StatelessWidget {
                     child: Text(
                       "Today's Data",
                       style: TextStyle(
-                        fontSize: 8,
+                        fontSize: 10,
                         fontWeight: FontWeight.w600,
                         color: Colors.grey[700],
                       ),
@@ -555,7 +553,7 @@ class DataTableWidget extends StatelessWidget {
                       child: Text(
                         item['title']!,
                         style: const TextStyle(
-                          fontSize: 8,
+                          fontSize: 10,
                           fontWeight: FontWeight.w500,
                           color: Colors.black,
                         ),
@@ -567,11 +565,11 @@ class DataTableWidget extends StatelessWidget {
                   Expanded(
                     flex: 2,
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
+                      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
                       child: Text(
                         item['yesterday']!,
                         style: const TextStyle(
-                          fontSize: 8,
+                          fontSize: 10,
                           fontWeight: FontWeight.w500,
                           color: Colors.blue,
                         ),
@@ -606,7 +604,7 @@ class DataTableWidget extends StatelessWidget {
   }
 }
 
-// 🟢 PV System ListTile Item
+
 class PVSystemListTile extends StatelessWidget {
   final String iconPath;
   final String title;
@@ -674,7 +672,6 @@ class PVSystemListTile extends StatelessWidget {
   }
 }
 
-// 🟢 PV System Info Section with 2 columns
 class PVSystemInfoSection extends StatelessWidget {
   const PVSystemInfoSection({super.key});
 
@@ -752,7 +749,7 @@ class PVSystemInfoSection extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Left Column
+
               Expanded(
 
                 child: Column(
@@ -806,7 +803,6 @@ class PVSystemInfoSection extends StatelessWidget {
   }
 }
 
-// 🟢 PV System Complete Data Section (At the very bottom)
 class PVSystemCompleteDataSection extends StatelessWidget {
   const PVSystemCompleteDataSection({super.key});
 
@@ -1047,7 +1043,6 @@ class PVSystemCompleteDataSection extends StatelessWidget {
   }
 }
 
-// 🟢 FirstScreen Widget
 class FirstScreen extends StatelessWidget {
   FirstScreen({super.key});
 
@@ -1141,14 +1136,14 @@ class FirstScreen extends StatelessWidget {
                       },
                     ),
 
-                    // Combined Tile - TemperatureTile বামে, SunMoonTile ডানে
+
                     Container(
                       height: 80,
                       margin: const EdgeInsets.only(top: 8, bottom: 8),
                       child: Stack(
                         clipBehavior: Clip.none,
                         children: [
-                          // SunMoonTile (ডানপাশে)
+                          // SunMoonTile
                           Positioned(
                             left: MediaQuery.of(context).size.width * 0.30,
                             top: 0,
@@ -1163,7 +1158,7 @@ class FirstScreen extends StatelessWidget {
                             top: 0,
                             bottom: 0,
                             child: Container(
-                              width: MediaQuery.of(context).size.width * 0.3,
+                              width: MediaQuery.of(context).size.width * 0.35,
                               child: TemperatureTile(slot: currentSlot),
                             ),
                           ),
