@@ -68,7 +68,7 @@ class _SplashScreenState extends State<SplashScreen> {
               style: GoogleFonts.inter(
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
-                color: AppColors.textSecondary,
+                color: Colors.white,
               ),
             ),
 
